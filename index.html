@@ -11,7 +11,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="./img/favicon-32x32.png"
     />
 
     <title>
@@ -35,17 +35,21 @@
         <div class="newsletter__cta-wrapper">
           <picture>
             <source
-              media="(min-width: 768px)"
+              media="(min-width: 1024px)"
               srcset="/img/illustration-sign-up-desktop.svg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="/img/illustration-sign-up-tablet.svg"
             />
             <img src="/img/illustration-sign-up-mobile.svg" alt="" />
           </picture>
 
           <div class="newsletter__content">
-            <div class="newsletter__content-text">
-              <h1 class="newsletter__title">Stay updated!</h1>
-              <p>Join 60,000+ product managers receiving monthly updates on:</p>
-            </div>
+            <h1 class="newsletter__title">Stay updated!</h1>
+            <p class="newsletter__description">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
 
             <ul class="newsletter__checkmark-list">
               <li class="newsletter__checkmark-list-item">
@@ -67,7 +71,7 @@
                   id="email"
                   placeholder="email@company.com"
                 />
-                <span class="error">Email address required</span>
+                <span class="newsletter__error">Email address required</span>
               </div>
               <button class="newsletter__button">
                 Subscribe to monthly newsletter
@@ -75,19 +79,7 @@
             </form>
           </div>
         </div>
-        <div class="sucess-message__wrapper">
-          <div class="sucess-message__text-content">
-            <img src="" alt="" />
-            <h1 class="sucess-message__title">Thanks for subscribing!</h1>
-            <p>
-              A confirmation email has been sent to ash@loremcompany.com. Please
-              open it and click the button inside to confirm your subscription.
-            </p>
-          </div>
-          <button class="sucess-message__button">Dismiss message</button>
-        </div>
       </section>
-      <section id="success_message" class="sucess-message"></section>
     </main>
     <footer>
       <div class="attribution">

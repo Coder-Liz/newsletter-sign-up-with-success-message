@@ -26,6 +26,8 @@ body {
   font-family: var(--ff-base);
   font-size: var(--fs-400);
   line-height: 1.5;
-  background-color: var(--clr-neutral-700);
-  height: auto;
+  background: var(--clr-neutral-700);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
 }
