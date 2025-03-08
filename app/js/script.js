@@ -62,13 +62,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function showPopup() {
-    overlay.classList.add('active');
-    popup.classList.add('active');
+    overlay.classList.add('open');
+    popup.classList.add('open');
   }
 
   function closePopup() {
-    overlay.classList.remove('active');
-    popup.classList.remove('active');
+    overlay.classList.remove('open');
+    popup.classList.remove('open');
     form.reset();
     hideError();
   }
