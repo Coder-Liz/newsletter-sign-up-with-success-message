@@ -197,9 +197,9 @@
       background: var(--clr-neutral-700);
     }
 
-    // &.active {
-    //   display: block; // Show overlay when active
-    // }
+    &.open {
+      display: block; // Show overlay when active
+    }
   }
 
   &__popup-wrapper {
@@ -223,9 +223,9 @@
       gap: u.rem(32);
     }
 
-    // &.active {
-    //   display: flex; // Show popup when active
-    // }
+    &.open {
+      display: flex; // Show popup when active
+    }
   }
 
   &__popup-content {
