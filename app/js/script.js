@@ -61,15 +61,15 @@ document.addEventListener('DOMContentLoaded', function () {
     emailInput.style.color = 'var(--clr-neutral-200)';
   }
 
-  function showPopup() {
-    overlay.classList.add('open');
-    popup.classList.add('open');
-  }
+  // function showPopup() {
+  //   overlay.classList.add('open');
+  //   popup.classList.add('open');
+  // }
 
-  function closePopup() {
-    overlay.classList.remove('open');
-    popup.classList.remove('open');
-    form.reset();
-    hideError();
-  }
+  // function closePopup() {
+  //   overlay.classList.remove('open');
+  //   popup.classList.remove('open');
+  //   form.reset();
+  //   hideError();
+  // }
 });
