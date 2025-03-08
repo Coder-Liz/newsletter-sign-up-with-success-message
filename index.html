@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/style.css" />
-    <script src="/app/js/script.js"></script>
+    <script defer src="/app/js/script.js"></script>
     <!-- displays site properly based on user's device -->
 
     <link
@@ -70,15 +70,46 @@
                   type="email"
                   id="email"
                   placeholder="email@company.com"
+                  required
                 />
                 <span class="newsletter__error">Email address required</span>
               </div>
-              <button class="newsletter__button">
+              <button class="newsletter__success-btn">
                 Subscribe to monthly newsletter
               </button>
             </form>
           </div>
         </div>
+        <!-- Popup structure start-->
+        <div id="overlay" class="newsletter__overlay active"></div>
+        <div id="popup" class="newsletter__popup-wrapper active">
+          <div class="newsletter__popup-content">
+            <svg
+              class="newsletter__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="21"
+              viewBox="0 0 21 21"
+            >
+              <g fill="none">
+                <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                <path
+                  stroke="#FFF"
+                  stroke-width="2"
+                  d="M6 11.381 8.735 14 15 8"
+                />
+              </g>
+            </svg>
+            <h2>Thanks for subscribing!</h2>
+            <p>
+              A confirmation email has been sent to
+              <strong>ash@loremcompany.com</strong>. Please open it and click
+              the button inside to confirm your subscription
+            </p>
+          </div>
+          <button class="newsletter__close-btn">Dismiss message</button>
+        </div>
+        <!-- Popup structure end-->
       </section>
     </main>
     <footer>

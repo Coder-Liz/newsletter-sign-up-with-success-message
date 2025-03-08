@@ -26,8 +26,12 @@ body {
   font-family: var(--ff-base);
   font-size: var(--fs-400);
   line-height: 1.5;
-  background: var(--clr-neutral-700);
+  background: var(--clr-neutral-100);
   min-height: 100vh;
   display: grid;
   place-content: center;
+
+  @include u.breakpoint(medium) {
+    background: var(--clr-neutral-700);
+  }
 }

@@ -135,7 +135,7 @@
     border: 1px solid var(--clr-neutral-200);
 
     &:not(:focus):invalid {
-      background: var(--clr-accent-100);
+      // background: var(--clr-accent-100);
       border: 1px solid var(--clr-accent-400);
       color: var(--clr-accent-400);
     }
@@ -143,6 +143,7 @@
 
   input:focus {
     outline: none;
+    background: var(--clr-neutral-100);
     border-color: var(--clr-neutral-800);
   }
 
@@ -180,18 +181,97 @@
       z-index: -1;
     }
   }
+
+  // Popup structure
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr-neutral-100);
+    display: none;
+    z-index: 1000;
+
+    @include u.breakpoint(medium) {
+      background: var(--clr-neutral-700);
+    }
+
+    &.active {
+      display: block; // Show overlay when active
+    }
+  }
+
+  &__popup-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 80vh;
+    background: var(--clr-neutral-100);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1001;
+
+    @include u.breakpoint(medium) {
+      width: u.rem(504);
+      height: auto;
+      border-radius: u.rem(36);
+      padding: u.rem(60) u.rem(64);
+      gap: u.rem(32);
+    }
+
+    &.active {
+      display: flex; // Show popup when active
+    }
+  }
+
+  &__popup-content {
+    display: grid;
+    gap: u.rem(32);
+    align-items: flex-start;
+    padding: u.rem(24);
+
+    @include u.breakpoint(medium) {
+      padding: 0;
+    }
+  }
+
+  &__icon {
+    width: u.rem(64);
+    height: u.rem(64);
+  }
+
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 2.05rem + 1.94vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--clr-neutral-800);
+  }
+
+  &__close-btn {
+    padding: u.rem(16) u.rem(104);
+    background: var(--clr-neutral-800);
+    color: var(--clr-neutral-100);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+      background: linear-gradient(
+        -90deg,
+        var(--clr-accent-400),
+        var(--clr-accent-500)
+      );
+    }
+
+    @include u.breakpoint(medium) {
+      padding: u.rem(16) u.rem(104);
+    }
+  }
 }
-
-// .sucess-message {
-//   &__wrapper {
-//   }
-
-//   &__text-content {
-//   }
-
-//   &__title {
-//   }
-
-//   &__button {
-//   }
-// }
