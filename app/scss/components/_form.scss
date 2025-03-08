@@ -182,6 +182,11 @@
     }
   }
 
+  #popup,
+  #overlay {
+    display: none;
+  }
+
   // Popup structure
   &__overlay {
     position: fixed;
