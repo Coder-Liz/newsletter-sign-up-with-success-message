@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const popup = document.getElementById('popup');
   const closeButton = document.querySelector('.newsletter__close-btn');
 
+  let hasInteracted = false;
+
   // Validate email and show popup only if valid
   form.addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent form from submitting
@@ -22,12 +24,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Live validation on input
   emailInput.addEventListener('input', function () {
+    hasInteracted = true;
+
     if (this.value === '') {
       showError('Email address required');
     } else if (!validateEmail(this.value)) {
       showError('Valid email required');
     } else {
       hideError();
+    }
+  });
+
+  emailInput.addEventListener('blur', function () {
+    if (!hasInteracted || validateEmail(this.value)) {
+      hideError();
+    } else if (this.value === '') {
+      showError('Email address required');
     }
   });
 
@@ -71,5 +83,6 @@ document.addEventListener('DOMContentLoaded', function () {
     popup.classList.remove('active');
     form.reset();
     hideError();
+    hasInteracted = false;
   }
 });
