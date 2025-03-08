@@ -182,11 +182,6 @@
     }
   }
 
-  #popup,
-  #overlay {
-    display: none;
-  }
-
   // Popup structure
   &__overlay {
     position: fixed;
@@ -200,6 +195,7 @@
 
     @include u.breakpoint(medium) {
       background: var(--clr-neutral-700);
+      display: none;
     }
 
     &.active {
@@ -226,6 +222,7 @@
       border-radius: u.rem(36);
       padding: u.rem(60) u.rem(64);
       gap: u.rem(32);
+      display: none;
     }
 
     &.active {
