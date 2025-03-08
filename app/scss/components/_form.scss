@@ -134,11 +134,11 @@
     color: var(--clr-neutral-200);
     border: 1px solid var(--clr-neutral-200);
 
-    &:not(:focus):invalid {
-      // background: var(--clr-accent-100);
-      border: 1px solid var(--clr-accent-400);
-      color: var(--clr-accent-400);
-    }
+    // &:not(:focus):invalid {
+    //   // background: var(--clr-accent-100);
+    //   border: 1px solid var(--clr-accent-400);
+    //   color: var(--clr-accent-400);
+    // }
   }
 
   input:focus {
