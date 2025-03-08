@@ -43,8 +43,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/newsletter-signup-with-success-message-cyD6xfUnWk)
+- Live Site URL: [Add live site URL here](https://shiny-maamoul-527215.netlify.app/)
 
 ## My process
 
