@@ -197,7 +197,7 @@
       background: var(--clr-neutral-700);
     }
 
-    &.open {
+    &.active {
       display: block; // Show overlay when active
     }
   }
@@ -223,7 +223,7 @@
       gap: u.rem(32);
     }
 
-    &.open {
+    &.active {
       display: flex; // Show popup when active
     }
   }
